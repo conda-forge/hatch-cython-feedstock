@@ -1,6 +1,6 @@
 context:
   name: hatch-cython
-  version: "0.5.1"
+  version: "0.6.0rc0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/joshua-auchincloss/${{ name|lower }}/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: de22dbbbaaded53ae6189f174f24f28f9649e04a05d9c8f629c751dcb59f2c61
+  sha256: f6e451fb82754621d2229c1b7785937f279487621ff93150163c1bb319331a82
 
 build:
   script: ${{ PYTHON }} -m pip install --no-deps --no-build-isolation -vv .
