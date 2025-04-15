@@ -9,6 +9,8 @@ package:
 source:
   url: https://github.com/joshua-auchincloss/${{ name|lower }}/archive/refs/tags/v${{ version }}.tar.gz
   sha256: f6e451fb82754621d2229c1b7785937f279487621ff93150163c1bb319331a82
+  patches:
+    - fix#67.patch
 
 build:
   script: ${{ PYTHON }} -m pip install --no-deps --no-build-isolation -vv .
