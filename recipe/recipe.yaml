@@ -9,12 +9,10 @@ package:
 source:
   url: https://github.com/joshua-auchincloss/${{ name|lower }}/archive/refs/tags/v${{ version }}.tar.gz
   sha256: 0873bad8bdab486c2678b84560cf2eca98388f4b740d903589df3d7001cd02e4
-  patches:
-    - fix#67.patch
 
 build:
   script: ${{ PYTHON }} -m pip install --no-deps --no-build-isolation -vv .
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
@@ -25,10 +23,8 @@ requirements:
   run:
     - python >=${{ python_min }}
     - cython
-    - hatch
     - hatchling
     - setuptools
-    - typing_extensions
 
 tests:
   - script:
