@@ -1,6 +1,6 @@
 context:
   name: hatch-cython
-  version: "0.6.0rc0"
+  version: "0.6.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/joshua-auchincloss/${{ name|lower }}/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: f6e451fb82754621d2229c1b7785937f279487621ff93150163c1bb319331a82
+  sha256: 0873bad8bdab486c2678b84560cf2eca98388f4b740d903589df3d7001cd02e4
   patches:
     - fix#67.patch
 
@@ -40,8 +40,8 @@ tests:
       - pytest tests/ -v
     files:
       source:
-          - tests/
-          - test_libraries/
+        - tests/
+        - test_libraries/
     requirements:
       run:
         - ${{ compiler("c") }}
